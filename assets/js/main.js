@@ -83,30 +83,35 @@ function scrollUp(){
 window.addEventListener('scroll', scrollUp);
 
 
-// light theme
+// change dark and light theme
 const themeButton = document.getElementById('theme-button');
-const lightTheme = 'light-theme';
-const iconTheme = 'fa-moon';
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selected-icon');
-
-const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'light' : 'dark';
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-sun' : 'fa-moon';
-
-if (selectedTheme) {
-  document.body.classList[selectedTheme === 'light' ? 'add' : 'remove'](lightTheme)
-  themeButton.classList[selectedIcon === 'fa-sun' ? 'add' : 'remove'](iconTheme)
+if(localStorage.getItem('theme') == null){
+    localStorage.setItem('theme','dark');
 }
 
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the light / icon theme
-    document.body.classList.toggle(lightTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-});
+localStorage.setItem('theme','dark');
+let localData = localStorage.getItem('theme');
+if(localData === 'dark'){
+    themeButton.src = "assets/imgs/sun.png";
+    document.body.classList.remove('light-theme');
+}
+else if(localData === 'light'){
+    themeButton.src = "assets/imgs/moon.png";
+    document.body.classList.add('light-theme');
+}
+
+themeButton.onclick = function(){
+    document.body.classList.toggle('light-theme');
+    if(document.body.classList.contains('light-theme')){
+        themeButton.src = "assets/imgs/moon.png";
+        localStorage.setItem('theme', 'light');
+    }
+    else{
+        themeButton.src = "assets/imgs/sun.png";
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+
 

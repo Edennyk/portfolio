@@ -56,6 +56,18 @@
     --z-fixed: 100;
     --z-modal: 1000;
 }
+/* variables light theme */
+.light-theme{
+    /* HSL color mode */
+    --first-color-second: hsl(var(--hue-color), 78%, 57%);  
+    --title-color: hsl(var(--hue-color), 8%, 53%);  
+    --text-color:hsl(var(--hue-color), 8%, 45%);    
+    --input-color: hsl(var(--hue-color), 70%, 96%);  
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+}
 
 /* Font size for large devices */
 /* 3rem = 48px, 1.5rem = 24px, .875rem = 14px, .813rem = 13.008  */
@@ -454,28 +466,6 @@ img{
     100%{ -webkit-transform:     translate(1px, -2px) rotate(-1deg); }
    }
 
-/* .projects__container{
-    overflow: initial;
-}
-.projects__content{
-    padding:0 1.5rem;
-}
-.projects__img{
-    width: 265px;
-    border-radius: .5rem;
-    justify-self: center;
-}
-.projects__title{
-    font-size: var(--h3-font-size);
-    margin-bottom: var(--mb-0-5)
-}
-.projects__description{
-    margin-bottom: var(--mb-0-75);
-}
-.projects__button:hover .button__icon{
-    transform: translate(.25rem);
-} */
-
 /* contact */
 .contact__container{
     row-gap: 3rem;
@@ -568,12 +558,6 @@ img{
     color: var(--text-color-light);
     margin-top: var(--mb-3);
 }
-/* .footer__title,
-.footer__subtitle,
-.footer__link,
-.footer__social{
-    color: #fff;
-} */
 
 /* active link */
 .active-link{
@@ -627,25 +611,14 @@ img{
     align-items: center;
 }
 .change-theme{
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     color: var(--title-color);
     margin-right: var(--mb-1);
     cursor: pointer;
+    width: 20px;
 }
 .change-theme:hover{
     color: var(--first-color);
-}
-/* variables light theme */
-body.light-theme{
-       /* HSL color mode */
-       --first-color-second: hsl(var(--hue-color), 78%, 57%);  
-       --title-color: hsl(var(--hue-color), 8%, 53%);  
-       --text-color:hsl(var(--hue-color), 8%, 45%);    
-       --input-color: hsl(var(--hue-color), 70%, 96%);  
-       --body-color: hsl(var(--hue-color), 60%, 99%);
-       --container-color: #fff;
-       --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-       --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 }
 
 /* === Media queries ===*/
