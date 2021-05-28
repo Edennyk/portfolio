@@ -83,50 +83,30 @@ function scrollUp(){
 window.addEventListener('scroll', scrollUp);
 
 
-// dark theme
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme';
-const iconTheme = 'fa-sun';
+// light theme
+const themeButton = document.getElementById('theme-button');
+const lightTheme = 'light-theme';
+const iconTheme = 'fa-moon';
 
 // Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-moon' : 'fa-sun'
+const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'light' : 'dark';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-sun' : 'fa-moon';
 
-// We validate if the user previously chose a topic
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'fa-moon' ? 'add' : 'remove'](iconTheme)
+  document.body.classList[selectedTheme === 'light' ? 'add' : 'remove'](lightTheme)
+  themeButton.classList[selectedIcon === 'fa-sun' ? 'add' : 'remove'](iconTheme)
 }
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
+    // Add or remove the light / icon theme
+    document.body.classList.toggle(lightTheme)
     themeButton.classList.toggle(iconTheme)
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
-})
+});
 
-// send email
-window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // generate a five digit number for the contact_number variable
-        this.contact_number.value = Math.random() * 100000 | 0;
-        // these IDs from the previous steps
-        emailjs.send('service_vn4qxb8', 'template_y8j0piu', this)
-            .then(function() {
-                console.log('SUCCESS!');
-            }, function(error) {
-                console.log('FAILED...', error);
-            });
-    });
-}
-
-    

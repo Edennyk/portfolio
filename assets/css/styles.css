@@ -10,17 +10,18 @@
 
     /* HSL color mode */
     --first-color:hsl(var(--hue-color), 78%, 57%);  
-    --first-color-second: hsl(var(--hue-color), 78%, 57%);  
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);  
     --first-color-alt: hsl(var(--hue-color), 66%, 49%);  
     --first-color-lighter: hsl(var(--hue-color), 94%, 91%);  
-    --title-color: hsl(var(--hue-color), 8%, 53%);  
-    --text-color:hsl(var(--hue-color), 8%, 45%);   
+    --title-color: hsl(var(--hue-color), 8%, 95%);  
+    --text-color:hsl(var(--hue-color), 8%, 75%);   
     --text-color-light: hsl(var(--hue-color), 8%, 72%);  
-    --input-color: hsl(var(--hue-color), 70%, 96%);  
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #fff;
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);  
+    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+
 
     /* font */
     --body-font: 'Poppins', sans-serif;;
@@ -478,23 +479,28 @@ img{
 /* contact */
 .contact__container{
     row-gap: 3rem;
+    
 }
 .contact__information{
     display: flex;
-    margin-bottom: var(--mb-2);
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+    
 }
 .contact__icon{
     font-size: 2rem;
     color: var(--first-color);
     margin-right: var(--mb-0-75);
 }
-contact__title{
+.contact__title{
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
+    
 }
 .contact__subtitle{
     font-size: var(--small-font-size);
     color: var(--text-color);
+   
 }
 .contact__content{
     background-color: var(--input-color);
@@ -530,17 +536,18 @@ contact__title{
 .footer__title{
     font-size: var(--h1-font-size);
     margin-bottom: var(--mb-0-25);
-    padding-left: 1.5rem;
-}
+    /* padding-left: 5rem;*/
+    text-align:center;
+} 
 .footer__subtitle{
     font-size: var(--medium-font-size);
-    padding-left: 1.5rem;
+    text-align:center;
 }
 .footer__links{
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
-    padding-left: 1.5em;
+    text-align:center;
     font-size: 1rem;
 }
 .footer__link:hover{
@@ -584,7 +591,7 @@ contact__title{
     background-color: var(--first-color);
     border-radius: .4rem;
     opacity: .6;
-    padding: 0 .3rem;
+    padding: .3rem .6rem;
     z-index: var(--z-tooltip);
     transition: .4s;
 }
@@ -628,17 +635,17 @@ contact__title{
 .change-theme:hover{
     color: var(--first-color);
 }
-/* variables dark theme */
-body.dark-theme{
+/* variables light theme */
+body.light-theme{
        /* HSL color mode */
-       --first-color-second: hsl(var(--hue-color), 30%, 8%);  
-       --title-color: hsl(var(--hue-color), 8%, 95%);  
-       --text-color:hsl(var(--hue-color), 8%, 75%);   
-       --input-color: hsl(var(--hue-color), 29%, 16%);  
-       --body-color: hsl(var(--hue-color), 28%, 12%);
-       --container-color: hsl(var(--hue-color), 29%, 16%);
-       --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-       --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+       --first-color-second: hsl(var(--hue-color), 78%, 57%);  
+       --title-color: hsl(var(--hue-color), 8%, 53%);  
+       --text-color:hsl(var(--hue-color), 8%, 45%);    
+       --input-color: hsl(var(--hue-color), 70%, 96%);  
+       --body-color: hsl(var(--hue-color), 60%, 99%);
+       --container-color: #fff;
+       --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+       --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 }
 
 /* === Media queries ===*/
@@ -795,13 +802,10 @@ body.dark-theme{
         row-gap: 2rem;
     }
     
-
- /*    .skills__container{
+    .skills__container{
         grid-template-columns: repeat(2,1fr);
         column-gap: 3rem;
         row-gap: 3rem;
         
-    }*/
-
-
+    }
 }

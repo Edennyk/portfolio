@@ -57,7 +57,7 @@
                     </div>
                     <div class="nav__btns">
                         <!-- change dark and light theme -->
-                        <i class="fas fa-moon change-theme" id="theme-button"></i>
+                        <i class="fas fa-sun change-theme" id="theme-button"></i>
 
                         <div class="nav__toggle" id="nav-toggle">
                             <i class="uil uil-apps"></i>
@@ -378,35 +378,24 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- send email form -->
-                    <form action="" class="contact__form grid id="contact-form">
-                        <div class="contact__inputs gird">
-                            <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text"  name="name" class="contact__input">
+                    <div>
+                        <div class="contact__information">
+                            <a href="http://github.com/edennyk" target="_blank" class="contact__icon">
+                            <i class="fab fa-github contact__icon"></i></a>
+                            <div>
+                                <h3 class="contact__title">Github</h3>
+                                <span class="contact__subtitle">github.com/edennyk</span>
                             </div>
                         </div>
-
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" name="email" class="contact__input">
+                        <div class="contact__information">
+                            <a href="http://www.linkedin.com/in/edennyk" target="_blank" class="contact__icon">
+                            <i class="fab fa-linkedin-in contact__icon"></i></a>
+                            <div>
+                                <h3 class="contact__title">LinkedIn</h3>
+                                <span class="contact__subtitle">linkedin.com/in/edennyk</span>
+                            </div>
                         </div>
-
-                        <div class="contact__content">
-                          <label for="" class="contact__label">Message</label>
-                          <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
-                        </div>
-                    
-                        <div>
-                             <input type="button" name="submit" value="Send Message" class="button">
-                            <!-- <a href="#" type="button" class="button button--flex">
-                                Send Message
-                            <i class="far fa-paper-plane button__icon"></i>
-                            </a> -->
-                        </div>
-                    
-                    </form>
+                    </div>
                 </div>
             </section>
         </main>
@@ -417,7 +406,7 @@
                  <div class="footer__container container grid">
                      <div>
                          <h1 class="footer__title">EDEN</h1>
-                         <span class="footer__subtitle">Frontend Developer</span>
+                         <!-- <span class="footer__subtitle">Frontend Developer</span> -->
                      </div>
 
                      <ul class="footer__links">
@@ -435,14 +424,6 @@
                         </li>
                      </ul>
 
-                     <div class="footer__socilas">
-                         <a href="https://www.linkedin.com/in/edennyk/" class="footer__social-icon" target="_blank" >
-                            <i class="fab fa-linkedin-in"></i>
-                         </a>
-                         <a href="https://github.com/Edennyk" class="footer__social-icon" target="_blank" >
-                            <i class="fab fa-github"></i>
-                         </a>
-                     </div>
                 </div>
                 <p class="footer__copy">&#169; Eden 2021. All right reserved</p>
              </div>
@@ -450,16 +431,9 @@
         
         <!-- Show up arrow scroll -->
         <a href="#" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
+            <i class="far fa-hand-point-up scrollup__icon"></i>
         </a>
         <!-- main js-->
         <script src="assets/js/main.js"></script>
-         <!-- email js -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-        <script type="text/javascript">
-        (function() {
-        emailjs.init("user_kVzgPfGs3Rgje5lZHHNUb");
-        })();
-        </script>
     </body>
 </html>
