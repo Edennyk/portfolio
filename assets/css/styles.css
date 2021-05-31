@@ -672,6 +672,8 @@ img{
     row-gap: 1.5rem;
     text-align:center;
     font-size: 1rem;
+}
+.footer__link{
     color:var(--first-color);
 }
 .footer__link:hover{
