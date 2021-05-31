@@ -674,10 +674,11 @@ img{
     font-size: 1rem;
 }
 .footer__link{
-    color: hsl(41, 93%, 54%);
+    color: var(--text-color-light);
 }
 .footer__link:hover{
-    color: var(--first-color-lighter);
+    /* color: var(--first-color-lighter); */
+    color:hsl(41, 93%, 79%);
 }
 
 .footer__copy{
@@ -714,6 +715,7 @@ img{
     font-size: 1.5rem;
     color: #fff;
 }  
+
 /* show up arrow scroll */
 .show-scroll{
     bottom: 5rem;
