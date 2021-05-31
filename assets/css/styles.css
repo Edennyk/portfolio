@@ -674,7 +674,7 @@ img{
     font-size: 1rem;
 }
 .footer__link{
-    color: var(--first-color-second);
+    color: hsl(41, 93%, 54%);
 }
 .footer__link:hover{
     color: var(--first-color-lighter);
