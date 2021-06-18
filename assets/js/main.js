@@ -113,5 +113,28 @@ themeButton.onclick = function(){
     }
 }
 
+// scroll down handler
+function isElementUnderBottom(elem, triggerDiff) {
+    const { top } = elem.getBoundingClientRect(); // check elements at bottom method
+    const { innerHeight } = window;
+    return top > innerHeight + (triggerDiff || 0);
+  }
+  
+  function handleScroll() {
+    const elems = document.querySelectorAll('.section__title');
+    elems.forEach(elem => {
+      if (isElementUnderBottom(elem, -20)) {
+        elem.style.opacity = "0";
+        elem.style.transform = 'translateY(-50px)';
+      } 
+      else {
+        elem.style.opacity = "1";
+        elem.style.transform = 'translateY(0px)';
+        elem.style.transition = '1s ease-in-out';
+      }
+    })
+  };
+  
+window.addEventListener('scroll', handleScroll);
 
 

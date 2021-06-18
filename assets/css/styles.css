@@ -120,7 +120,8 @@ img{
 }
 
 /* section class css*/
-.section{
+.section
+{
     padding: 2rem 0 4rem;
 }
 .section__title{
@@ -129,6 +130,7 @@ img{
     color: var(--text-color);
     margin-bottom: 2rem;
 }
+
 .section__title::after{
     position: absolute;
     content: "";
