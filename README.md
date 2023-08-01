@@ -1,7 +1,7 @@
-# portfolio2021
-**[2021ver. Portfolio](https://edennyk.github.io/portfolio/)**
+# Portfolio
+**[Portfolio](https://edennyk.github.io/portfolio/)**
 
-## stacks
+## Stacks
 JavaScript / HTML / CSS
 
 #
