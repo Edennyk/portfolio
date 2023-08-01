@@ -400,13 +400,6 @@ img{
 .skills__container{
     row-gap: 0;
 }
-/* .skills__header{
-    display: flex;
-    align-items: center;
-    margin-bottom: var(--mb-2-5);
-    cursor:pointer;
-} */
-
 .skills__list{
     display: grid;
     grid-tempLate-columns: repeat(2, 1fr);
@@ -444,50 +437,18 @@ img{
     left: 0;
     width:50%;
     height:90px;
-    /* background: rgba(100, 100, 100, 0.5); */
     border-radius: 45px 0 0 45px; 
     } 
 .skills__img-icon{
     width:50px;
-/* z-index:2; */
 }
-/* .skills__icon,
-.skills__arrow{
-    font-size: 2rem;
-    color: var(--first-color);
-} */
-/* .skills__icon{
-    margin-right: var(--mb-0-5);
-} */
 .skills__title{
     font-size: var(--h3-font-size);
 }
-/* .skills__arrow{
-    margin-left:  auto;
-    transition: .4s;
-} */
-/* .skills__img{
-    margin-bottom: var(--mb-0-5);
-    width: 50px;
-    transition: .4s;
-    border-radius: .5rem;
-    justify-self: center;
-} */
 .skills__list{
     row-gap: 1.5rem;
     padding-left: 2.7em;
 }
-/* .skills__close .skills__list{
-    height: 0;
-    overflow: hidden;
-}
-.skills__open .skills__list{
-    height: max-content;
-    margin-bottom: var(--mb-0-75);
-}
-.skills__open .skills__arrow{
-    transform: rotate(-180deg);
-} */
 
 /* projects */
 .projects__container{
@@ -520,38 +481,15 @@ img{
     margin-bottom: var(--mb-0-75);
    
 }
-
 .projects__content:hover{
     box-shadow: 0 12px 45px  rgba(174,190,205, .4);
     
 }
-
 .projects__content:hover .projects__img{
     transform: scale(1.02);
 }
-
-/* .projects__button{
-    height: 30px;
-    width: 30px;
-    padding: 7px;
-} 
-
-.projects__button:hover .button__icon{
-    transform: translate(.25rem);
-} */
-
 .github-icon{
    font-size: 1.4rem;
-    /* display: inline-block; */
-    /* height: 50px;
-    line-height: 50px;
-    margin: auto 3px;
-    width: 50px;
-    font-size: 24px;
-    text-align: center;
-    border-radius: 50px;
-    background:var(--first-color); */
-   
     color: var(--first-color); 
     cursor: pointer;
 }
@@ -653,7 +591,6 @@ img{
     color: var(--text-color-light);
     font-size: var(--h1-font-size);
     margin-bottom: var(--mb-0-25);
-    /* padding-left: 5rem;*/
     text-align:center;
 } 
 .footer__subtitle{
@@ -671,10 +608,8 @@ img{
     color: var(--text-color-light);
 }
 .footer__link:hover{
-    /* color: var(--first-color-lighter); */
     color:hsl(41, 93%, 79%);
 }
-
 .footer__copy{
     font-size: var(--smaller-font-size);
     text-align:center;
@@ -709,7 +644,6 @@ img{
     font-size: 1.5rem;
     color: #fff;
 }  
-
 /* show up arrow scroll */
 .show-scroll{
     bottom: 5rem;
@@ -769,7 +703,6 @@ img{
         top: 2.5rem;
         background-color: var(--first-color);
     }
-
     .section__subtitle{
         display: block;
         font-size: var(--small-font-size);
@@ -790,9 +723,18 @@ img{
     .skills__title{
         font-size: var(--normal-font-size);
     }
+    .skills__list{
+        padding:0;
+        padding-left:2rem;
+    }
 }
 
 /* Medium devices */
+@media screen and (min-width:350px){
+    .skills__list{
+        padding-left:8rem;
+    }
+}
 @media screen and (min-width:568px) {
     .section__title{
         position: relative;
@@ -811,7 +753,6 @@ img{
         top: 2.5rem;
         background-color: var(--first-color);
     }
-
     .home__content{
         grid-template-columns: max-content 1fr 1fr;
     }.home__data{
@@ -837,6 +778,11 @@ img{
     row-gap: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
+ }
+ .skills__list{
+    padding:0;
+    grid-tempLate-columns: repeat(3, 1fr);
+    padding-left: 6rem;
  }
 }
 
@@ -868,7 +814,6 @@ img{
         top: 2.5rem;
         background-color: var(--first-color);
     }
-
     .header{
         top:0;
         bottom: initial;
@@ -972,14 +917,12 @@ img{
     .contact__inputs{
         grid-template-columns: repeat(2,1fr);
     }
-   
      .projects__container{
         grid-template-columns: repeat(3,1fr);
         padding: 5rem;
         column-gap: 2rem;
         row-gap: 2rem;
     }
-    
     .skills__container{
         grid-template-columns: repeat(2,1fr);
         column-gap: 3rem;

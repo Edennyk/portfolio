@@ -25,25 +25,6 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-// skills open and close
-// const skillsContet = document.getElementsByClassName('skills__content'),
-//       skillsHeader = document.querySelectorAll('.skills__header');
-
-// function toggleSkills(){
-//     let itemClass = this.parentNode.className;
-
-//     for(i = 0; i < skillsContet.length; i++){
-//         skillsContet[i].className = 'skills__content skills__close';
-//     }
-//     if(itemClass === 'skills__content skills__close'){
-//         this.parentNode.className = 'skills__content skills__opne';
-//     }
-// };
-
-// skillsHeader.forEach((e) => {
-//     e.addEventListener('click', toggleSkills);
-// });
-
 // scroll sections active to nav link
 const sections = document.querySelectorAll('section[id]');
 
